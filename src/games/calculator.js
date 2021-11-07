@@ -11,19 +11,12 @@ const calculatorGameRound = () => {
   const firstNumber = randomNumber(0, 100);
   const secondNumber = randomNumber(0, 100);
 
-  const operationCharacter = generateRandomOperationCharacter();
-  const operation = getOperationByCharacter(operationCharacter);
+  const operationCharacter = randomCharacter(Object.keys(operationByCharacter));
+
+  const operation = operationByCharacter[operationCharacter];
 
   console.log(`Question: ${firstNumber} ${operationCharacter} ${secondNumber}`);
-
-  const answer = getAnswer();
-  const expectedAnswer = operation(firstNumber, secondNumber);
-
-  return getResult(
-    answer,
-    expectedAnswer,
-    compareAnswers.bind(null, Number(answer), expectedAnswer),
-  );
+  return String(operation(firstNumber, secondNumber));
 };
 
 const calculator = () => {

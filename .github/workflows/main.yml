@@ -22,6 +22,5 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
         run: make install
-      - run: cat ./src/games/calculator.js
       - name: Linting
         run: make lint
