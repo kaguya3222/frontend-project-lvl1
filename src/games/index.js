@@ -2,34 +2,23 @@ import readlineSync from 'readline-sync';
 
 const roundQuantity = 3;
 
-export const greetings = () => {
+export default (round, task) => {
   console.log('Welcome to the Brain Games!');
-
   const name = readlineSync.question('May I have your name? ');
-
   console.log(`Hello, ${name}!`);
-};
+  console.log(task);
 
-export const getAnswer = () => readlineSync.question('Your answer: ');
-
-export const compareAnswers = (current, expected) => current === expected;
-
-export const getResult = (current, expected, compare) => {
-  if (compare()) {
-    console.log('Correct!');
-
-    return true;
-  }
-
-  console.log(`'${current}' is wrong answer ;(. Correct answer was '${expected}'`);
-
-  return false;
-};
-
-export const processGameRound = (round) => {
   for (let i = 0; i < roundQuantity; i += 1) {
-    const result = round();
+    const expectedAnswer = round();
+    const answer = readlineSync.question('Your answer: ');
 
-    if (!result) break;
+    const result = answer === expectedAnswer;
+
+    if (!result) {
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${expectedAnswer}'`);
+      return;
+    }
+    console.log('Correct');
   }
+  console.log(`Congratulations, ${name}!`);
 };

@@ -1,26 +1,11 @@
 import { randomCharacter, randomNumber } from '../random.js';
-import {
-  compareAnswers,
-  getAnswer, getResult, greetings, processGameRound,
-} from './index.js';
+import processGameRound from './index.js';
 
-const operationCharacters = {
-  multiply: '*',
-  sum: '+',
-  diff: '-',
+const operationByCharacter = {
+  '+': (x, y) => x + y,
+  '-': (x, y) => x - y,
+  '*': (x, y) => x * y,
 };
-
-const sum = (x, y) => x + y;
-const diff = (x, y) => x - y;
-const multiply = (x, y) => x * y;
-
-const generateRandomOperationCharacter = () => randomCharacter(Object.values(operationCharacters));
-
-const getOperationByCharacter = (character) => ({
-  [operationCharacters.sum]: sum,
-  [operationCharacters.diff]: diff,
-  [operationCharacters.multiply]: multiply,
-}[character]);
 
 const calculatorGameRound = () => {
   const firstNumber = randomNumber(0, 100);
@@ -42,11 +27,7 @@ const calculatorGameRound = () => {
 };
 
 const calculator = () => {
-  greetings();
-
-  console.log('What is the result of the expression?');
-
-  processGameRound(calculatorGameRound);
+  processGameRound(calculatorGameRound, 'What is the result of the expression?');
 };
 
 export default calculator;
