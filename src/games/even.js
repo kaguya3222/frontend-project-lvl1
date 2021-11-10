@@ -6,8 +6,6 @@ const isEven = (number) => number % 2 === 0;
 const evenGameRound = () => {
   const number = randomNumber(0, 100);
 
-  console.log(`Question: ${number}`);
-
   return getCorrectPredicateGameAnswer(isEven.bind(null, number));
 };
 
