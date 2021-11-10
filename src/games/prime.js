@@ -20,7 +20,7 @@ const isPrime = (n) => {
 const primeGameRound = () => {
   const number = randomNumber(1, 200);
 
-  return getCorrectPredicateGameAnswer(isPrime.bind(null, number));
+  return getCorrectPredicateGameAnswer(isPrime, number);
 };
 
 const prime = () => {
