@@ -8,3 +8,5 @@
 [Brain even game demo](https://asciinema.org/a/92ZEy5icFrqnMaZ6l5rgAEOKO)
 
 [Brain calculator game demo](https://asciinema.org/a/tr9Z0QckpQiyejpcHinb6247S)
+
+[Brain gcd game demo](https://asciinema.org/a/vEInkblT2ZXDRnt9T2GPq5CCP)
