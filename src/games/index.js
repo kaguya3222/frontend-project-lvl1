@@ -2,7 +2,11 @@ import readlineSync from 'readline-sync';
 
 const roundQuantity = 3;
 
-export default (round, task) => {
+export const getCorrectPredicateGameAnswer = (predicate) => (predicate() ? 'yes' : 'no');
+
+export const predicateGameTask = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
+export const processGameRound = (round, task) => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
