@@ -24,6 +24,7 @@ export const processGameRound = (round, task) => {
 
     if (!result) {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${expectedAnswer}'`);
+      console.log(`Lets try again, ${name}!`);
       return;
     }
     console.log('Correct');
