@@ -10,3 +10,7 @@
 [Brain calculator game demo](https://asciinema.org/a/tr9Z0QckpQiyejpcHinb6247S)
 
 [Brain gcd game demo](https://asciinema.org/a/vEInkblT2ZXDRnt9T2GPq5CCP)
+
+[Brain progression game demo](https://asciinema.org/a/L5CjV9iYQlSdvOlxB6sTynYhC)
+
+[Brain prime game demo](https://asciinema.org/a/D5lWMzhvAdndQ783Hl8SPE9Z6)
