@@ -1,5 +1,5 @@
 import { randomNumber } from '../random.js';
-import { processGameRound, getCorrectPredicateGameAnswer, predicateGameTask } from './index.js';
+import { processGameRound, getCorrectPredicateGameAnswer, predicateGameTask } from '../index.js';
 
 const isPrime = (n) => {
   const rangeStart = 2;

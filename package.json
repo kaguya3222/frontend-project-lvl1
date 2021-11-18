@@ -1,16 +1,13 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/kaguya3222/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/kaguya3222/frontend-project-lvl1/actions)",
+  "description": "Node.js brain games",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kaguya3222/frontend-project-lvl1.git"
   },
-  "author": "",
+  "author": "kaguya3222",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/kaguya3222/frontend-project-lvl1/issues"

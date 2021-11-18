@@ -1,5 +1,5 @@
 import { randomNumber } from '../random.js';
-import { processGameRound, getCorrectPredicateGameAnswer, predicateGameTask } from './index.js';
+import { processGameRound, getCorrectPredicateGameAnswer, predicateGameTask } from '../index.js';
 
 const isEven = (number) => number % 2 === 0;
 

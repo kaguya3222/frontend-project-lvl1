@@ -1,5 +1,5 @@
 import { randomCharacter, randomNumber } from '../random.js';
-import { processGameRound } from './index.js';
+import { processGameRound } from '../index.js';
 
 const operationByCharacter = {
   '+': (x, y) => x + y,
