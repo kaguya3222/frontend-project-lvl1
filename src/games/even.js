@@ -1,6 +1,6 @@
 import randomNumber from '../random.js';
 import processGameRound from '../index.js';
-import { getCorrectPredicateGameAnswer, predicateGameTask } from './predicate.js';
+import { getCorrectPredicateGameAnswer, getPredicateGameTask } from './predicate.js';
 
 const isEven = (number) => number % 2 === 0;
 
@@ -10,6 +10,8 @@ const evenGameRound = () => {
   return getCorrectPredicateGameAnswer(isEven, number);
 };
 
+const task = getPredicateGameTask('number is even');
+
 export default () => {
-  processGameRound(evenGameRound, predicateGameTask);
+  processGameRound(evenGameRound, task);
 };

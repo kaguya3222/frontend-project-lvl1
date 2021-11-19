@@ -4,4 +4,4 @@ export const getCorrectPredicateGameAnswer = (predicate, number) => {
   return predicate(number) ? 'yes' : 'no';
 };
 
-export const predicateGameTask = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+export const getPredicateGameTask = (statement) => `Answer "yes" if given ${statement}. Otherwise answer "no".`;

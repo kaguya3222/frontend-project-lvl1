@@ -1,8 +1,6 @@
 import randomNumber from '../random.js';
 import processGameRound from '../index.js';
 
-const progressionLength = 10;
-
 const generateProgression = (difference, first, length) => {
   const iter = (acc) => {
     if (acc.length === length) return acc;
@@ -12,6 +10,8 @@ const generateProgression = (difference, first, length) => {
 
   return iter([first]);
 };
+
+const progressionLength = 10;
 
 const progressionGameRound = () => {
   const difference = randomNumber(1, 10);
@@ -26,6 +26,8 @@ const progressionGameRound = () => {
   return String(hiddenElement);
 };
 
+const task = 'What number is missing in the progression?';
+
 export default () => {
-  processGameRound(progressionGameRound, 'What number is missing in the progression?');
+  processGameRound(progressionGameRound, task);
 };
