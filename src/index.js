@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 
 const roundQuantity = 3;
 
-export const processGameRound = (round, task) => {
+export default (round, task) => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
