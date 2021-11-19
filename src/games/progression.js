@@ -18,10 +18,10 @@ const progressionGameRound = () => {
   const first = randomNumber(0, 100);
   const progression = generateProgression(difference, first, progressionLength);
   const hiddenIndex = randomNumber(0, progressionLength - 1);
+  const progressionWithHiddenElement = progression.map((el, index) => (index === hiddenIndex ? '..' : el));
   const hiddenElement = progression[hiddenIndex];
-  progression[hiddenIndex] = '..';
 
-  console.log(`Question: ${progression.join(' ')}`);
+  console.log(`Question: ${progressionWithHiddenElement.join(' ')}`);
 
   return String(hiddenElement);
 };
