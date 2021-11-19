@@ -19,8 +19,6 @@ const calculatorGameRound = () => {
   return String(operation(firstNumber, secondNumber));
 };
 
-const calculator = () => {
+export default () => {
   processGameRound(calculatorGameRound, 'What is the result of the expression?');
 };
-
-export default calculator;
