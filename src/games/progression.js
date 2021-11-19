@@ -26,8 +26,6 @@ const progressionGameRound = () => {
   return String(hiddenElement);
 };
 
-const progression = () => {
+export default () => {
   processGameRound(progressionGameRound, 'What number is missing in the progression?');
 };
-
-export default progression;

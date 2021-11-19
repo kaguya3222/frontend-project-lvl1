@@ -10,8 +10,6 @@ const evenGameRound = () => {
   return getCorrectPredicateGameAnswer(isEven, number);
 };
 
-const even = () => {
+export default () => {
   processGameRound(evenGameRound, predicateGameTask);
 };
-
-export default even;

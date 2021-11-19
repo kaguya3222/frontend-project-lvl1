@@ -24,8 +24,6 @@ const primeGameRound = () => {
   return getCorrectPredicateGameAnswer(isPrime, number);
 };
 
-const prime = () => {
+export default () => {
   processGameRound(primeGameRound, predicateGameTask);
 };
-
-export default prime;

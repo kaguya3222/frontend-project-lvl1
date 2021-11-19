@@ -14,8 +14,6 @@ const gcdGameRound = () => {
   return String(gcd);
 };
 
-const gcd = () => {
+export default () => {
   processGameRound(gcdGameRound, 'Find the greatest common divisor of given numbers.');
 };
-
-export default gcd;
