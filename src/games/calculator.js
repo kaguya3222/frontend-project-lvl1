@@ -1,4 +1,4 @@
-import { randomCharacter, randomNumber } from '../random.js';
+import randomNumber from '../random.js';
 import processGameRound from '../index.js';
 
 const operationByCharacter = {
@@ -11,7 +11,9 @@ const calculatorGameRound = () => {
   const firstNumber = randomNumber(0, 100);
   const secondNumber = randomNumber(0, 100);
 
-  const operationCharacter = randomCharacter(Object.keys(operationByCharacter));
+  const operationCharacters = Object.keys(operationByCharacter);
+
+  const operationCharacter = operationCharacters[randomNumber(0, operationCharacters.length - 1)];
 
   const operation = operationByCharacter[operationCharacter];
 

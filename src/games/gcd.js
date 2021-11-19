@@ -1,4 +1,4 @@
-import { randomNumber } from '../random.js';
+import randomNumber from '../random.js';
 import processGameRound from '../index.js';
 
 const getGcd = (a, b) => (b ? getGcd(b, a % b) : a);
