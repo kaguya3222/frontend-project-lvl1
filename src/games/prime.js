@@ -1,6 +1,6 @@
 import randomNumber from '../random.js';
 import processGameRound from '../index.js';
-import { getCorrectPredicateGameAnswer, getPredicateGameTask } from './predicate.js';
+import { getPredicateGameRoundResult, getPredicateGameTask } from './predicate.js';
 
 const isPrime = (n) => {
   const rangeStart = 2;
@@ -20,9 +20,8 @@ const isPrime = (n) => {
 
 const primeGameRound = () => {
   const number = randomNumber(1, 200);
-  const expectedAnswer = getCorrectPredicateGameAnswer(isPrime, number);
 
-  return [expectedAnswer, String(number)];
+  return getPredicateGameRoundResult(isPrime, number);
 };
 
 const task = getPredicateGameTask('number is prime');

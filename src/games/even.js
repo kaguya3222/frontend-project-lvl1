@@ -1,14 +1,13 @@
 import randomNumber from '../random.js';
 import processGameRound from '../index.js';
-import { getCorrectPredicateGameAnswer, getPredicateGameTask } from './predicate.js';
+import { getPredicateGameRoundResult, getPredicateGameTask } from './predicate.js';
 
 const isEven = (number) => number % 2 === 0;
 
 const evenGameRound = () => {
   const number = randomNumber(0, 100);
-  const expectedAnswer = getCorrectPredicateGameAnswer(isEven, number);
 
-  return [expectedAnswer, String(number)];
+  return getPredicateGameRoundResult(isEven, number);
 };
 
 const task = getPredicateGameTask('number is even');
