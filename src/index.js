@@ -9,7 +9,8 @@ export default (round, task) => {
   console.log(task);
 
   for (let i = 0; i < roundQuantity; i += 1) {
-    const expectedAnswer = round();
+    const [expectedAnswer, question] = round();
+    console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
 
     const result = answer === expectedAnswer;

@@ -20,8 +20,10 @@ const isPrime = (n) => {
 
 const primeGameRound = () => {
   const number = randomNumber(1, 200);
+  const expectedAnswer = getCorrectPredicateGameAnswer(isPrime, number);
+  const question = `${number}`;
 
-  return getCorrectPredicateGameAnswer(isPrime, number);
+  return [expectedAnswer, question];
 };
 
 const task = getPredicateGameTask('number is prime');

@@ -9,9 +9,10 @@ const gcdGameRound = () => {
 
   const gcd = getGcd(number1, number2);
 
-  console.log(`Question: ${number1} ${number2}`);
+  const expectedAnswer = String(gcd);
+  const question = `${number1} ${number2}`;
 
-  return String(gcd);
+  return [expectedAnswer, question];
 };
 
 const task = 'Find the greatest common divisor of given numbers.';

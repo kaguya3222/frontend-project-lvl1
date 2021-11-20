@@ -17,8 +17,10 @@ const calculatorGameRound = () => {
 
   const operation = operationByCharacter[operationCharacter];
 
-  console.log(`Question: ${firstNumber} ${operationCharacter} ${secondNumber}`);
-  return String(operation(firstNumber, secondNumber));
+  const expectedAnswer = String(operation(firstNumber, secondNumber));
+  const question = `${firstNumber} ${operationCharacter} ${secondNumber}`;
+
+  return [expectedAnswer, question];
 };
 
 const task = 'What is the result of the expression?';

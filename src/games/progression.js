@@ -20,10 +20,10 @@ const progressionGameRound = () => {
   const hiddenIndex = randomNumber(0, progressionLength - 1);
   const progressionWithHiddenElement = progression.map((el, index) => (index === hiddenIndex ? '..' : el));
   const hiddenElement = progression[hiddenIndex];
+  const expectedAnswer = String(hiddenElement);
+  const question = `${progressionWithHiddenElement.join(' ')}`;
 
-  console.log(`Question: ${progressionWithHiddenElement.join(' ')}`);
-
-  return String(hiddenElement);
+  return [expectedAnswer, question];
 };
 
 const task = 'What number is missing in the progression?';
