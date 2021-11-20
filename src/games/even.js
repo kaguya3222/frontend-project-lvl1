@@ -7,9 +7,8 @@ const isEven = (number) => number % 2 === 0;
 const evenGameRound = () => {
   const number = randomNumber(0, 100);
   const expectedAnswer = getCorrectPredicateGameAnswer(isEven, number);
-  const question = `${number}`;
 
-  return [expectedAnswer, question];
+  return [expectedAnswer, String(number)];
 };
 
 const task = getPredicateGameTask('number is even');
