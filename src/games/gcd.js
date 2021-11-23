@@ -3,7 +3,7 @@ import runGame from '../index.js';
 
 const getGcd = (a, b) => (b ? getGcd(b, a % b) : a);
 
-const gcdGameRound = () => {
+const runGcdGameRound = () => {
   const number1 = getRandomNumber(1, 100);
   const number2 = getRandomNumber(1, 100);
 
@@ -18,5 +18,5 @@ const gcdGameRound = () => {
 const task = 'Find the greatest common divisor of given numbers.';
 
 export default () => {
-  runGame(gcdGameRound, task);
+  runGame(runGcdGameRound, task);
 };

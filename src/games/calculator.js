@@ -7,7 +7,7 @@ const operationByCharacter = {
   '*': (x, y) => x * y,
 };
 
-const calculatorGameRound = () => {
+const runCalculatorGameRound = () => {
   const firstNumber = getRandomNumber(0, 100);
   const secondNumber = getRandomNumber(0, 100);
 
@@ -26,5 +26,5 @@ const calculatorGameRound = () => {
 const task = 'What is the result of the expression?';
 
 export default () => {
-  runGame(calculatorGameRound, task);
+  runGame(runCalculatorGameRound, task);
 };

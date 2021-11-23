@@ -4,7 +4,7 @@ import { getPredicateGameRoundResult, getPredicateGameTask } from './predicate.j
 
 const isEven = (number) => number % 2 === 0;
 
-const evenGameRound = () => {
+const runEvenGameRound = () => {
   const number = getRandomNumber(0, 100);
 
   return getPredicateGameRoundResult(isEven, number);
@@ -13,5 +13,5 @@ const evenGameRound = () => {
 const task = getPredicateGameTask('number is even');
 
 export default () => {
-  runGame(evenGameRound, task);
+  runGame(runEvenGameRound, task);
 };

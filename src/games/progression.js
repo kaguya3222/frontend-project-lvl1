@@ -13,7 +13,7 @@ const generateProgression = (difference, first, length) => {
 
 const progressionLength = 10;
 
-const progressionGameRound = () => {
+const runProgressionGameRound = () => {
   const difference = getRandomNumber(1, 10);
   const first = getRandomNumber(0, 100);
   const progression = generateProgression(difference, first, progressionLength);
@@ -29,5 +29,5 @@ const progressionGameRound = () => {
 const task = 'What number is missing in the progression?';
 
 export default () => {
-  runGame(progressionGameRound, task);
+  runGame(runProgressionGameRound, task);
 };

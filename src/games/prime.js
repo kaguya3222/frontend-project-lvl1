@@ -18,7 +18,7 @@ const isPrime = (n) => {
   return iter(smallestPrimeNumber);
 };
 
-const primeGameRound = () => {
+const runPrimeGameRound = () => {
   const number = getRandomNumber(1, 200);
 
   return getPredicateGameRoundResult(isPrime, number);
@@ -27,5 +27,5 @@ const primeGameRound = () => {
 const task = getPredicateGameTask('number is prime');
 
 export default () => {
-  runGame(primeGameRound, task);
+  runGame(runPrimeGameRound, task);
 };
