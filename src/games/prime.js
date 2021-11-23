@@ -3,9 +3,9 @@ import processGameRound from '../index.js';
 import { getPredicateGameRoundResult, getPredicateGameTask } from './predicate.js';
 
 const isPrime = (n) => {
-  const rangeStart = 2;
+  const smallestPrimeNumber = 2;
 
-  if (n < rangeStart) return false;
+  if (n < smallestPrimeNumber) return false;
 
   const iter = (acc) => {
     if (acc === n) return true;
@@ -15,7 +15,7 @@ const isPrime = (n) => {
     return iter(acc + 1);
   };
 
-  return iter(rangeStart);
+  return iter(smallestPrimeNumber);
 };
 
 const primeGameRound = () => {
