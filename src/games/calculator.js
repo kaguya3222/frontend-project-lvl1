@@ -13,7 +13,9 @@ const runCalculatorGameRound = () => {
 
   const operationCharacters = Object.keys(operationByCharacter);
 
-  const operationCharacter = operationCharacters[getRandomNumber(0, operationCharacters.length - 1)];
+  const operationCharacter = operationCharacters[
+    getRandomNumber(0, operationCharacters.length - 1)
+  ];
 
   const operation = operationByCharacter[operationCharacter];
 
