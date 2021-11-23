@@ -1,5 +1,5 @@
 import getRandomNumber from '../random.js';
-import processGameRound from '../index.js';
+import runGame from '../index.js';
 import { getPredicateGameRoundResult, getPredicateGameTask } from './predicate.js';
 
 const isPrime = (n) => {
@@ -27,5 +27,5 @@ const primeGameRound = () => {
 const task = getPredicateGameTask('number is prime');
 
 export default () => {
-  processGameRound(primeGameRound, task);
+  runGame(primeGameRound, task);
 };

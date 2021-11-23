@@ -1,5 +1,5 @@
 import getRandomNumber from '../random.js';
-import processGameRound from '../index.js';
+import runGame from '../index.js';
 
 const operationByCharacter = {
   '+': (x, y) => x + y,
@@ -26,5 +26,5 @@ const calculatorGameRound = () => {
 const task = 'What is the result of the expression?';
 
 export default () => {
-  processGameRound(calculatorGameRound, task);
+  runGame(calculatorGameRound, task);
 };

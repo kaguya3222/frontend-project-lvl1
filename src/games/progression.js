@@ -1,5 +1,5 @@
 import getRandomNumber from '../random.js';
-import processGameRound from '../index.js';
+import runGame from '../index.js';
 
 const generateProgression = (difference, first, length) => {
   const iter = (acc) => {
@@ -29,5 +29,5 @@ const progressionGameRound = () => {
 const task = 'What number is missing in the progression?';
 
 export default () => {
-  processGameRound(progressionGameRound, task);
+  runGame(progressionGameRound, task);
 };
