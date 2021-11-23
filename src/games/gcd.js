@@ -1,11 +1,11 @@
-import randomNumber from '../random.js';
+import getRandomNumber from '../random.js';
 import processGameRound from '../index.js';
 
 const getGcd = (a, b) => (b ? getGcd(b, a % b) : a);
 
 const gcdGameRound = () => {
-  const number1 = randomNumber(1, 100);
-  const number2 = randomNumber(1, 100);
+  const number1 = getRandomNumber(1, 100);
+  const number2 = getRandomNumber(1, 100);
 
   const gcd = getGcd(number1, number2);
 

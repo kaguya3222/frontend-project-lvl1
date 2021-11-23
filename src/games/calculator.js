@@ -1,4 +1,4 @@
-import randomNumber from '../random.js';
+import getRandomNumber from '../random.js';
 import processGameRound from '../index.js';
 
 const operationByCharacter = {
@@ -8,12 +8,12 @@ const operationByCharacter = {
 };
 
 const calculatorGameRound = () => {
-  const firstNumber = randomNumber(0, 100);
-  const secondNumber = randomNumber(0, 100);
+  const firstNumber = getRandomNumber(0, 100);
+  const secondNumber = getRandomNumber(0, 100);
 
   const operationCharacters = Object.keys(operationByCharacter);
 
-  const operationCharacter = operationCharacters[randomNumber(0, operationCharacters.length - 1)];
+  const operationCharacter = operationCharacters[getRandomNumber(0, operationCharacters.length - 1)];
 
   const operation = operationByCharacter[operationCharacter];
 

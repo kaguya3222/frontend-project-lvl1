@@ -1,4 +1,4 @@
-import randomNumber from '../random.js';
+import getRandomNumber from '../random.js';
 import processGameRound from '../index.js';
 
 const generateProgression = (difference, first, length) => {
@@ -14,10 +14,10 @@ const generateProgression = (difference, first, length) => {
 const progressionLength = 10;
 
 const progressionGameRound = () => {
-  const difference = randomNumber(1, 10);
-  const first = randomNumber(0, 100);
+  const difference = getRandomNumber(1, 10);
+  const first = getRandomNumber(0, 100);
   const progression = generateProgression(difference, first, progressionLength);
-  const hiddenIndex = randomNumber(0, progressionLength - 1);
+  const hiddenIndex = getRandomNumber(0, progressionLength - 1);
   const progressionWithHiddenElement = progression.map((el, index) => (index === hiddenIndex ? '..' : el));
   const hiddenElement = progression[hiddenIndex];
   const expectedAnswer = String(hiddenElement);
