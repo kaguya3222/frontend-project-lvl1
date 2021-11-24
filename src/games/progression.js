@@ -6,7 +6,13 @@ const hiddenElementCharacter = '..';
 
 const getQuestion = (difference, first, missingIndex) => {
   const getQuestionProgression = (acc, index) => {
-    if (acc.length === progressionLength) return acc;
+    if (acc.length === progressionLength) {
+      if (missingIndex === index) {
+        return [...acc.slice(0, -1), hiddenElementCharacter];
+      }
+
+      return acc;
+    }
 
     const currentElement = acc[index];
     const nextElement = currentElement + difference;
