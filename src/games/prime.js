@@ -1,6 +1,5 @@
 import getRandomNumber from '../random.js';
 import runGame from '../index.js';
-import { getPredicateGameRoundResult, getPredicateGameTask } from './predicate.js';
 
 const isPrime = (n) => {
   const smallestPrimeNumber = 2;
@@ -21,10 +20,10 @@ const isPrime = (n) => {
 const runPrimeGameRound = () => {
   const number = getRandomNumber(1, 200);
 
-  return getPredicateGameRoundResult(isPrime, number);
+  return [isPrime(number) ? 'yes' : 'no', String(number)];
 };
 
-const task = getPredicateGameTask('number is prime');
+const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 export default () => {
   runGame(runPrimeGameRound, task);
