@@ -10,15 +10,10 @@ const operationByCharacter = {
 const runCalculatorGameRound = () => {
   const firstNumber = getRandomNumber(0, 100);
   const secondNumber = getRandomNumber(0, 100);
-
   const operationCharacters = Object.keys(operationByCharacter);
-
-  const operationCharacter = operationCharacters[
-    getRandomNumber(0, operationCharacters.length - 1)
-  ];
-
+  const randomCharacter = getRandomNumber(0, operationCharacters.length - 1);
+  const operationCharacter = operationCharacters[randomCharacter];
   const operation = operationByCharacter[operationCharacter];
-
   const expectedAnswer = String(operation(firstNumber, secondNumber));
   const question = `${firstNumber} ${operationCharacter} ${secondNumber}`;
 
