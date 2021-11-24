@@ -2,35 +2,22 @@ import getRandomNumber from '../random.js';
 import runGame from '../index.js';
 
 const progressionLength = 10;
-const hiddenElementCharacter = '..';
 
 const getQuestion = (difference, first, missingIndex) => {
-  const getQuestionProgression = (acc, index) => {
-    if (acc.length === progressionLength) {
-      if (missingIndex === index) {
-        return [...acc.slice(0, -1), hiddenElementCharacter];
-      }
+  const iter = (acc, index) => {
+    if (acc.split(' ').length === progressionLength) return acc;
 
-      return acc;
-    }
-
-    const currentElement = acc[index];
-    const nextElement = currentElement + difference;
     const nextIndex = index + 1;
 
-    if (index === missingIndex) {
-      return getQuestionProgression(
-        [...acc.slice(0, -1), hiddenElementCharacter, nextElement],
-        nextIndex,
-      );
-    }
+    if (index === missingIndex) return iter(`${acc} ..`, nextIndex);
 
-    return getQuestionProgression([...acc, nextElement], nextIndex);
+    const nextElement = first + difference * index;
+    const nextAcc = `${acc} ${nextElement}`.trim();
+
+    return iter(nextAcc, nextIndex);
   };
 
-  const progression = getQuestionProgression([first], 0);
-
-  return progression.join(' ');
+  return iter('', 0);
 };
 
 const runProgressionGameRound = () => {
