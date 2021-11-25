@@ -13,9 +13,9 @@ export default (generateRound, task) => {
     console.log(`Question: ${question}`);
     const receivedAnswer = readlineSync.question('Your answer: ');
 
-    const result = receivedAnswer === expectedAnswer;
+    const isAnswerCorrect = receivedAnswer === expectedAnswer;
 
-    if (!result) {
+    if (!isAnswerCorrect) {
       console.log(`'${receivedAnswer}' is wrong answer ;(. Correct answer was '${expectedAnswer}'`);
       console.log(`Let's try again, ${name}!`);
       return;
