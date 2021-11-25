@@ -1,6 +1,8 @@
 import getRandomNumber from '../random.js';
 import runGame from '../index.js';
 
+const task = 'What is the result of the expression?';
+
 const operationByCharacter = {
   '+': (x, y) => x + y,
   '-': (x, y) => x - y,
@@ -19,8 +21,6 @@ const runCalculatorGameRound = () => {
 
   return [expectedAnswer, question];
 };
-
-const task = 'What is the result of the expression?';
 
 export default () => {
   runGame(runCalculatorGameRound, task);

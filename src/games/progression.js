@@ -1,6 +1,8 @@
 import getRandomNumber from '../random.js';
 import runGame from '../index.js';
 
+const task = 'What number is missing in the progression?';
+
 const progressionLength = 10;
 
 const getQuestion = (difference, first, missingIndex) => {
@@ -30,8 +32,6 @@ const runProgressionGameRound = () => {
 
   return [expectedAnswer, question];
 };
-
-const task = 'What number is missing in the progression?';
 
 export default () => {
   runGame(runProgressionGameRound, task);
