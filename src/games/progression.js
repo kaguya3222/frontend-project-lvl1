@@ -9,7 +9,8 @@ const getQuestion = (difference, first, missingIndex) => {
   const generateProgression = (acc, index) => {
     if (acc.length === progressionLength) return acc;
 
-    const nextElement = index === missingIndex ? '..' : first + difference * index;
+    const current = first + difference * index;
+    const nextElement = index === missingIndex ? '..' : current;
 
     return generateProgression([...acc, nextElement], index + 1);
   };
