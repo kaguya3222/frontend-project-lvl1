@@ -4,20 +4,21 @@ import runGame from '../index.js';
 const progressionLength = 10;
 
 const getQuestion = (difference, first, missingIndex) => {
-  const iter = (acc, index) => {
-    if (acc.split(' ').length === progressionLength) return acc;
+  const generateProgression = (acc, index) => {
+    if (acc.length === progressionLength) return acc;
 
     const nextIndex = index + 1;
 
-    if (index === missingIndex) return iter(`${acc} ..`, nextIndex);
+    if (index === missingIndex) return generateProgression([...acc, '..'], nextIndex);
 
     const nextElement = first + difference * index;
-    const nextAcc = `${acc} ${nextElement}`.trim();
 
-    return iter(nextAcc, nextIndex);
+    return generateProgression([...acc, nextElement], nextIndex);
   };
 
-  return iter('', 0);
+  const progression = generateProgression([], 0);
+
+  return progression.join(' ');
 };
 
 const runProgressionGameRound = () => {
