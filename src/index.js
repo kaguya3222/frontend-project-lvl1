@@ -11,12 +11,12 @@ export default (generateRound, task) => {
   for (let i = 0; i < roundQuantity; i += 1) {
     const [expectedAnswer, question] = generateRound();
     console.log(`Question: ${question}`);
-    const answer = readlineSync.question('Your answer: ');
+    const receivedAnswer = readlineSync.question('Your answer: ');
 
-    const result = answer === expectedAnswer;
+    const result = receivedAnswer === expectedAnswer;
 
     if (!result) {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${expectedAnswer}'`);
+      console.log(`'${receivedAnswer}' is wrong answer ;(. Correct answer was '${expectedAnswer}'`);
       console.log(`Let's try again, ${name}!`);
       return;
     }
