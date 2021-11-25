@@ -9,7 +9,7 @@ const operationByCharacter = {
   '*': (x, y) => x * y,
 };
 
-const runCalculatorGameRound = () => {
+const generateCalculatorRound = () => {
   const firstNumber = getRandomNumber(0, 100);
   const secondNumber = getRandomNumber(0, 100);
   const operationCharacters = Object.keys(operationByCharacter);
@@ -23,5 +23,5 @@ const runCalculatorGameRound = () => {
 };
 
 export default () => {
-  runGame(runCalculatorGameRound, task);
+  runGame(generateCalculatorRound, task);
 };

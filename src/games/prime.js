@@ -19,7 +19,7 @@ const isPrime = (n) => {
   return iter(smallestPrimeNumber);
 };
 
-const runPrimeGameRound = () => {
+const generatePrimeGameRound = () => {
   const number = getRandomNumber(1, 200);
   const expectedAnswer = isPrime(number) ? 'yes' : 'no';
   const question = String(number);
@@ -28,5 +28,5 @@ const runPrimeGameRound = () => {
 };
 
 export default () => {
-  runGame(runPrimeGameRound, task);
+  runGame(generatePrimeGameRound, task);
 };

@@ -23,7 +23,7 @@ const getQuestion = (difference, first, missingIndex) => {
   return progression.join(' ');
 };
 
-const runProgressionGameRound = () => {
+const generateProgressionGameRound = () => {
   const difference = getRandomNumber(1, 10);
   const first = getRandomNumber(0, 100);
   const missingIndex = getRandomNumber(0, progressionLength - 1);
@@ -34,5 +34,5 @@ const runProgressionGameRound = () => {
 };
 
 export default () => {
-  runGame(runProgressionGameRound, task);
+  runGame(generateProgressionGameRound, task);
 };
