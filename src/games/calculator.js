@@ -13,8 +13,8 @@ const generateCalculatorRound = () => {
   const firstNumber = getRandomNumber(0, 100);
   const secondNumber = getRandomNumber(0, 100);
   const operationCharacters = Object.keys(operationByCharacter);
-  const randomCharacter = getRandomNumber(0, operationCharacters.length - 1);
-  const operationCharacter = operationCharacters[randomCharacter];
+  const randomOperationIndex = getRandomNumber(0, operationCharacters.length - 1);
+  const operationCharacter = operationCharacters[randomOperationIndex];
   const operation = operationByCharacter[operationCharacter];
   const expectedAnswer = String(operation(firstNumber, secondNumber));
   const question = `${firstNumber} ${operationCharacter} ${secondNumber}`;
